@@ -28,7 +28,7 @@ class URLServer:
         return function
  
 def hello_world(environ, start_response):
-    _hello_resp = '''\ <html>
+    _hello_resp = '''<html>
   <head>
      <title>Hello {name}</title>
    </head>
@@ -42,7 +42,7 @@ def hello_world(environ, start_response):
     yield resp.encode('utf-8')        
     
 def localtime(environ, start_response):
-    _localtime_resp = '''\ <?xml version="1.0"?> <time>
+    _localtime_resp = '''<?xml version="1.0"?> <time>
       <year>{t.tm_year}</year>
       <month>{t.tm_mon}</month>
       <day>{t.tm_mday}</day>
